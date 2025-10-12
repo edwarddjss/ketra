@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ketra</title>
+</head>
+<body>
+  <div class="title-bar">
+    <div class="title-text">ketra</div>
+    <div style="display: flex; align-items: center; gap: 6px; -webkit-app-region: no-drag;">
+      <button id="settingsBtn">⚙</button>
+      <div class="window-controls">
+        <button id="minimize">_</button>
+        <button id="maximize">□</button>
+        <button id="close">X</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="fab-container">
+    <button class="fab-btn" id="cloneBtn" title="Clone Repository">⤓</button>
+    <button class="fab-btn" id="newProjectBtn" title="New Project">+</button>
+  </div>
+
+  <div class="content">
+    <div id="pinnedSection" style="display: none;">
+      <div class="section-title">PINNED</div>
+      <div class="projects-grid" id="pinnedProjects"></div>
+    </div>
+
+    <div id="recentSection">
+      <div class="section-title">ALL PROJECTS</div>
+      <div class="projects-grid" id="recentProjects">
+        <div class="empty-state">No projects found. Click "+ NEW" to create one!</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="trash-zone" id="trashZone">
+    <span class="trash-icon">🗑</span>
+    <span>DROP HERE TO DELETE</span>
+  </div>
+
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
